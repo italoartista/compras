@@ -17,7 +17,10 @@ const obterProduto = (req, res) => {
 
 // Listar Produtos
 const listarProdutos = (req, res) => {
-    res.status(200).json(produtoModel.listarProdutos());
+    const { nome, minPreco, maxPreco, minEstoque, maxEstoque } = req.query;
+    const filtros = { nome, minPreco: Number(minPreco), maxPreco: Number(maxPreco), minEstoque: Number(minEstoque), maxEstoque: Number(maxEstoque) };
+    const produtosFiltrados = produtoModel.filtrarProdutos(filtros);
+    res.status(200).json(produtosFiltrados);
 };
 
 // Atualizar um Produto
