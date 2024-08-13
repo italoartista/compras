@@ -1,4 +1,4 @@
-### Desafio: Refatoração de Sistema de Pedidos com Arquitetura Baseada em Classes e Camadas
+### Desafio: Refatoração do sistema de pedidos, desacoplando a camada de modelos
 
 #### Descrição do Desafio
 
